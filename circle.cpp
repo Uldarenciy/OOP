@@ -7,11 +7,11 @@ using std::cout, std::endl;
 #include "point.h"
 
 Circle::Circle(const Point& acenter, float aradius)
-	{
-		mCenter = acenter;
-		mRadius = aradius;
-		//cout << aradius << " " << mCenter;
-	}
+{
+    mCenter = acenter;
+    mRadius = aradius;
+    
+}
 Circle::Circle()
 {
     cout << "Default Construtor" << endl;
@@ -84,59 +84,18 @@ void Circle::move(const Point& p)
 
 int main()
 {
-	// Point p = {7, -1};
-	// Point q = {-4, 2};
-	// cout << "Point p = " << p << endl;
-	// cout << "Point q = " << q << endl;
-	// cout << "p + q = " << p + q << endl;
-	// Circle();
 	Circle a {{4, 1}, 3};
 	Circle c {{8, 5}, 2};
-	//Circle b (a);
+	
 	Circle b ({1, 2}, 6);
-	//Circle b (c);
-	//b.getRadius();
+	
 	b.setRadius(9);
 	cout << b.getRadius() << " " << b.getCenter();
-	//b.setCenter(78, 98);
+	
 	cout << "Center b = " << b.getCenter() << " Area = " << b.getArea();
 	Point point1 (4, 1);
 	cout << "distance = " << a.getDistance(point1);
 	cout << b.isColliding(a);
 	b.move(point1);
 	cout << "Center = " << b.getCenter();
-
-
-	
-
-	
-/*
-	Circle a {{4, 1}, 3};
-	Circle b;
-
-	cout << "Circle a: center: " << a.getCenter() << " radius: " << a.getRadius() << endl; 
-	cout << "Circle b: center: " << b.getCenter() << " radius: " << b.getRadius() << endl;
-
-	cout << "Area of a = " << a.getArea() << endl;
-	cout << "Distance from point p to circle a = " << a.getDistance(p) << endl;
-
-
-
-	cout << "Collisions:" << endl;
-	if (a.isColliding(b))
-		cout << "Yes, a is colliding b" << endl;
-	else
-		cout << "No, a isn't colliding b" << endl;
-
-
-
-	cout << "Moving b by {1, 1}:" << endl;
-	b.move({1, 1});
-	if (a.isColliding(b))
-		cout << "Yes, a is colliding b" << endl;
-	else
-		cout << "No, a isn't colliding b" << endl;
-*/
-
-
 }
